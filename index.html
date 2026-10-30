@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Squeek Tracker</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #1b1b1b; }
+    h1 { margin-bottom: 0.25rem; }
+    p.sub { margin-top: 0; color: #555; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1rem; margin-top: 1.5rem; }
+    dt { font-weight: 600; }
+    dd { margin: 0; word-break: break-all; }
+    .error { color: #b00020; }
+    footer { margin-top: 2rem; font-size: 0.85rem; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Squeek Tracker</h1>
+  <p class="sub">Live Squeekchain mining progress on the Sepolia testnet. Read-only.</p>
+  <button id="refresh" type="button">Refresh</button>
+  <div id="result">Loading…</div>
+  <footer>
+    Reads public data only. It never asks for a wallet, a signature or a key. SQK on Sepolia is test tokens.
+    Blocks marked "projected" are optimistic and not yet settled on-chain.
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
